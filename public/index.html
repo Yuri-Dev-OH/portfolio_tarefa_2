@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Yuri Gonçalves</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/icons/portfolio.png">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <img src="img/icons/portfolio.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#inicio">Início</a>
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                    <a class="nav-link" href="#formacao">Formação</a>
+                    <a class="nav-link" href="#competencias">Competências</a>
+                    <a class="nav-link" href="#projetos">Projetos</a>
+                    <a class="nav-link" href="#cursos">Cursos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+         1. PÁGINA DE APRESENTAÇÃO
+    ═══════════════════════════════════════ -->
+    <section id="inicio" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-md-7">
+                    <span class="badge-saudacao" id="greeting-badge"></span>
+                    <h1 class="titulo-principal" id="perfil-nome">Carregando...</h1>
+                    <p class="subtitulo" id="perfil-subtitulo"></p>
+                    <div class="links-hero d-flex flex-wrap gap-3 mb-4">
+                        <a id="link-github" href="#" target="_blank" class="btn btn-social">
+                            <i class="devicon-github-original"></i> GitHub
+                        </a>
+                        <a id="link-linkedin" href="#" target="_blank" class="btn btn-social btn-social-blue">
+                            <i class="devicon-linkedin-plain"></i> LinkedIn
+                        </a>
+                    </div>
+                    <a href="#projetos" class="btn botao-cta">Ver meus projetos →</a>
+                </div>
+                <div class="col-md-5 text-center">
+                    <img id="perfil-foto" src="" alt="Foto de Perfil" class="foto-perfil">
+                    <div class="saudacao-container mt-4">
+                        <img id="greeting-gif" src="" alt="" class="greeting-gif mb-2" width="110">
+                        <h4 id="greeting-text" class="greeting-text"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         2. SOBRE MIM
+    ═══════════════════════════════════════ -->
+    <section id="sobre" class="section-white">
+        <div class="container">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-title">Sobre Mim</h2>
+                <p class="mt-4 lead" id="perfil-bio"></p>
+                <div class="contato-cards mt-4 row g-3 justify-content-center text-start">
+                    <div class="col-auto">
+                        <div class="contato-chip">📧 <span id="perfil-email"></span></div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="contato-chip">📱 <span id="perfil-whatsapp"></span></div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="contato-chip">📍 <span id="perfil-local"></span></div>
+                    </div>
+                </div>
+                <a href="arquivos/curriculo.pdf" download="Curriculo_Yuri_Goncalves" class="btn btn-cv mt-4">
+                    📄 Baixar Currículo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         3. FORMAÇÃO ACADÊMICA
+    ═══════════════════════════════════════ -->
+    <section id="formacao" class="section-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Formação Acadêmica</h2>
+            <div id="loading-formacao" class="text-center text-muted py-4">Carregando...</div>
+            <div class="row g-4 justify-content-center" id="container-formacao"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         4. COMPETÊNCIAS
+    ═══════════════════════════════════════ -->
+    <section id="competencias" class="section-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-2">Competências</h2>
+            <p class="text-center text-muted mb-5">Clique nos cards para ver detalhes</p>
+
+            <h5 class="competencia-grupo mb-4">⚙️ Habilidades Técnicas</h5>
+            <div id="loading-hard" class="text-center text-muted py-3">Carregando...</div>
+            <div class="row g-4 mb-5" id="container-hardskills"></div>
+
+            <h5 class="competencia-grupo mb-4">🤝 Soft Skills</h5>
+            <div id="loading-soft" class="text-center text-muted py-3">Carregando...</div>
+            <div class="row g-3" id="container-softskills"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         5. PROJETOS
+    ═══════════════════════════════════════ -->
+    <section id="projetos" class="section-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Projetos em Destaque</h2>
+            <div id="loading-projetos" class="text-center text-muted py-4">Carregando...</div>
+            <div class="row g-4 justify-content-center" id="container-projetos"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         6. CURSOS E CERTIFICADOS
+    ═══════════════════════════════════════ -->
+    <section id="cursos" class="section-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Cursos e Certificados</h2>
+            <div id="loading-cursos" class="text-center text-muted py-4">Carregando...</div>
+            <div class="row g-4 justify-content-center" id="container-cursos"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FOOTER – LINKS PROFISSIONAIS
+    ═══════════════════════════════════════ -->
+    <footer class="footer text-center py-5">
+        <div class="mb-3">
+            <a id="footer-github" href="#" target="_blank" class="btn btn-sm btn-social me-2">
+                <i class="devicon-github-original"></i> GitHub
+            </a>
+            <a id="footer-linkedin" href="#" target="_blank" class="btn btn-sm btn-social btn-social-blue">
+                <i class="devicon-linkedin-plain"></i> LinkedIn
+            </a>
+        </div>
+        <p class="mb-0 text-muted small">
+            © 2026 <span id="footer-nome"></span> — DSM · Fatec SJC
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

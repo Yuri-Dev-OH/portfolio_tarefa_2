@@ -1,0 +1,388 @@
+/* ============================================================
+   styles.css  –  Portfólio Yuri Gonçalves
+   ============================================================ */
+
+/* ── Variáveis & Reset ────────────────────────────────────── */
+:root {
+    --azul:       #3498db;
+    --azul-esc:   #2980b9;
+    --rosa:       #EC4899;
+    --rosa-esc:   #d13d88;
+    --verde:      #10B981;
+    --fundo:      #FFFBEB;
+    --branco:     #ffffff;
+    --cinza-cl:   #f3f4f6;
+    --texto:      #1e293b;
+    --texto-mut:  #64748b;
+    --sombra:     0 4px 20px rgba(0,0,0,0.07);
+    --sombra-md:  0 8px 30px rgba(0,0,0,0.12);
+    --radius:     16px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+}
+
+section { padding: 100px 0; }
+.section-white { background: var(--branco); }
+.section-light { background: var(--cinza-cl); }
+
+/* ── Título de seção ─────────────────────────────────────── */
+.section-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--azul);
+    position: relative;
+    padding-bottom: 14px;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 55px; height: 4px;
+    background: var(--rosa);
+    border-radius: 2px;
+}
+
+/* ── Navbar ──────────────────────────────────────────────── */
+.custom-nav {
+    background: var(--azul) !important;
+    padding: 11px 0;
+    box-shadow: 0 2px 12px rgba(52,152,219,.35);
+}
+.navbar .navbar-brand img { height: 48px; }
+.custom-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin-left: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: .25s;
+}
+.custom-nav .nav-link:hover { background: rgba(255,255,255,.18); }
+
+/* ── Hero ────────────────────────────────────────────────── */
+.hero-section {
+    min-height: 100vh;
+    padding: 120px 0 80px;
+}
+
+.badge-saudacao {
+    display: inline-block;
+    background: rgba(52,152,219,.12);
+    color: var(--azul);
+    border: 1px solid rgba(52,152,219,.3);
+    border-radius: 25px;
+    padding: 5px 16px;
+    font-weight: 600;
+    font-size: .9rem;
+    margin-bottom: 16px;
+}
+
+.titulo-principal {
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: var(--azul);
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    font-size: 1.25rem;
+    color: var(--texto-mut);
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+
+.foto-perfil {
+    width: 100%;
+    max-width: 270px;
+    border-radius: 50%;
+    border: 8px solid var(--azul);
+    box-shadow: var(--sombra-md);
+    transition: .3s ease;
+}
+.foto-perfil:hover { transform: scale(1.04); }
+
+.saudacao-container { animation: fadeIn 1.4s ease; }
+.greeting-gif { border-radius: 10px; }
+.greeting-text {
+    color: var(--azul);
+    font-weight: 800;
+    font-size: 1.9rem;
+}
+
+/* ── Botões Hero ─────────────────────────────────────────── */
+.btn-social {
+    background: var(--branco);
+    color: var(--texto);
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 9px 20px;
+    transition: .25s;
+}
+.btn-social:hover {
+    border-color: var(--texto);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra);
+}
+.btn-social-blue {
+    border-color: var(--azul);
+    color: var(--azul);
+}
+.btn-social-blue:hover {
+    background: var(--azul);
+    color: #fff;
+    border-color: var(--azul);
+}
+
+.botao-cta {
+    background: var(--rosa);
+    color: #fff;
+    border-radius: 50px;
+    padding: 14px 36px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    transition: .3s ease;
+}
+.botao-cta:hover {
+    background: var(--rosa-esc);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(236,72,153,.4);
+}
+
+/* ── Sobre – chips de contato ────────────────────────────── */
+.contato-chip {
+    background: var(--cinza-cl);
+    border: 1px solid #e2e8f0;
+    border-radius: 25px;
+    padding: 8px 18px;
+    font-size: .9rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.btn-cv {
+    background: var(--rosa);
+    color: #fff;
+    border-radius: 50px;
+    padding: 12px 34px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: .3s ease;
+}
+.btn-cv:hover {
+    background: var(--rosa-esc);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(236,72,153,.4);
+}
+
+/* ── Formação ─────────────────────────────────────────────── */
+.card-formacao {
+    background: var(--branco);
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: var(--sombra);
+    border-top: 5px solid var(--azul);
+    height: 100%;
+    transition: .3s ease;
+}
+.card-formacao:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-md);
+}
+.formacao-icone { font-size: 2.4rem; display: block; margin-bottom: 12px; }
+.formacao-badge {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 3px 14px;
+    font-size: .8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.badge-superior { background: var(--azul); color: #fff; }
+.badge-tecnico  { background: var(--verde); color: #fff; }
+.formacao-curso { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; }
+.formacao-inst, .formacao-periodo {
+    color: var(--texto-mut);
+    font-size: .9rem;
+    margin-bottom: 4px;
+}
+
+/* ── Competências – Hard Skills ──────────────────────────── */
+.competencia-grupo {
+    font-weight: 700;
+    border-left: 4px solid var(--rosa);
+    padding-left: 12px;
+    margin-bottom: 1rem;
+}
+
+.card-tech {
+    background: var(--branco);
+    border-radius: var(--radius);
+    padding: 24px 16px;
+    text-align: center;
+    cursor: pointer;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--sombra);
+    transition: .3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.card-tech:hover { transform: translateY(-5px); box-shadow: var(--sombra-md); }
+.card-tech i { font-size: 48px; margin-bottom: 8px; }
+.skill-nome { font-weight: 700; font-size: .9rem; margin: 0; }
+.skill-desc { font-size: .82rem; color: #fff; opacity: .9; margin: 0; }
+
+.card-tech.active { background: var(--azul); color: #fff; }
+.card-description { display: none; opacity: 0; }
+.card-tech.active .card-description { display: block; opacity: 1; animation: fadeIn .4s ease; }
+.card-tech.active .card-content { display: none; }
+
+/* ── Soft Skills ─────────────────────────────────────────── */
+.card-soft {
+    background: var(--branco);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: var(--sombra);
+    transition: .3s ease;
+    border-left: 4px solid transparent;
+}
+.card-soft:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-md);
+    border-left-color: var(--rosa);
+}
+.soft-emoji { font-size: 2rem; flex-shrink: 0; }
+.soft-nome  { font-weight: 700; font-size: .95rem; margin-bottom: 2px; }
+.soft-desc  { font-size: .83rem; color: var(--texto-mut); margin: 0; }
+
+/* ── Projetos ────────────────────────────────────────────── */
+.projeto-card {
+    background: var(--branco);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    border-bottom: 5px solid var(--verde);
+    height: 100%;
+    transition: .3s ease;
+}
+.projeto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-md);
+}
+.projeto-img-wrap {
+    width: 100%; height: 195px;
+    overflow: hidden; background: #e0f0fb;
+}
+.projeto-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: .4s ease;
+}
+.projeto-card:hover .projeto-img { transform: scale(1.06); }
+.proj-titulo { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; }
+.proj-desc   { font-size: .9rem; color: var(--texto-mut); margin-bottom: 12px; }
+
+.btn-proj {
+    background: var(--azul);
+    color: #fff;
+    border-radius: 9px;
+    padding: 9px 18px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: .25s ease;
+}
+.btn-proj:hover { background: var(--azul-esc); color: #fff; transform: translateY(-2px); }
+
+/* ── Cursos ──────────────────────────────────────────────── */
+.curso-card {
+    background: var(--branco);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--sombra);
+    height: 100%;
+    border-top: 4px solid var(--rosa);
+    transition: .3s ease;
+}
+.curso-card:hover { transform: translateY(-4px); box-shadow: var(--sombra-md); }
+.curso-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+.curso-icone   { font-size: 2rem; flex-shrink: 0; }
+.curso-titulo  { font-weight: 800; font-size: 1rem; margin-bottom: 3px; }
+.curso-entidade { font-size: .85rem; color: var(--texto-mut); margin: 0; }
+.curso-info    { display: flex; gap: 8px; flex-wrap: wrap; }
+.info-chip {
+    background: var(--cinza-cl);
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+.btn-pdf {
+    background: transparent;
+    border: 2px solid var(--azul);
+    color: var(--azul);
+    border-radius: 9px;
+    padding: 7px 16px;
+    font-weight: 600;
+    font-size: .85rem;
+    text-decoration: none;
+    transition: .25s;
+}
+.btn-pdf:hover { background: var(--azul); color: #fff; }
+
+/* ── Footer ──────────────────────────────────────────────── */
+.footer {
+    background: var(--branco);
+    border-top: 1px solid #e2e8f0;
+}
+
+/* ── Animações ───────────────────────────────────────────── */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsividade ──────────────────────────────────────── */
+@media (max-width: 768px) {
+    section { padding: 75px 0; }
+    .titulo-principal { font-size: 2.3rem; }
+    .subtitulo { font-size: 1.05rem; }
+    .section-title { font-size: 1.75rem; }
+    .hero-section { text-align: center; }
+    .links-hero { justify-content: center; }
+}
+
+@media (max-width: 576px) {
+    .titulo-principal { font-size: 1.9rem; }
+    .card-tech { min-height: 130px; }
+}
