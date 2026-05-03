@@ -3,7 +3,7 @@
 //  Consome a API REST via fetch() (GET, POST, PUT, DELETE)
 // ============================================================
 
-const API = 'http://localhost:3000/api';
+const API = '/api';
 
 // ── Inicialização ────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
